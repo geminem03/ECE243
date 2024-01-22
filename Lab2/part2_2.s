@@ -10,13 +10,9 @@ _start:
     mov r18, r15        # store first student number in r18
     ldb r13, (r12)      # load the first grade into r13 (using ldb for 8-bit byte)
     mov r19, r13        # store the first grade in r19
-	
-    movi r17, 0         # initialize loop counter
 
 condition: 
     beq r15, r0, invalid # if the current student number is zero, go to invalid
-    
-    beq r17, r15, after  # if loop counter is equal to the current student number, go to after
     
     beq r10, r15, after  # if r10 (searched student number) is equal to the current student number, go to equal
 	
