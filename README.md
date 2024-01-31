@@ -9,3 +9,12 @@ Explore the fundamentals of Assembly Language programming, CPULator simulation, 
 ## Lab 2: Accessing Memory, Loops, Conditional Branches
 
 Dive deeper into Assembly Language programming in Lab 2. Explore memory access, loop structures, and conditional branches. Enhance your skills in program development and gain a comprehensive understanding of real-time execution on the DE1-SoC board. Engage in hands-on interactions with the Monitor Program for a holistic learning experience.
+
+## Lab 3: Logic Instructions, Subroutines and Memory Mapped Output
+
+The goal of this lab is to cover the following concepts/skills: using the logic and shift instructions to access single
+bits, understanding how to make a subroutine, and how transfer of control works, as well as parameter passing,
+what memory-mapped output is, and an introduction to time in the form of software delay loops. This, together
+with practice in basic assembly programming, accessing memory through loads and stores and those crucial de-
+bugging skills that are the key pathway to becoming an engineer!
+
