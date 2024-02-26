@@ -18,3 +18,21 @@ what memory-mapped output is, and an introduction to time in the form of softwar
 with practice in basic assembly programming, accessing memory through loads and stores and those crucial de-
 bugging skills that are the key pathway to becoming an engineer!
 
+## Lab 4: Memory Mapped I/O, Polling and Timer
+
+The goal of this lab is to explore the use of devices that provide input and output capabilities for a processor, and
+to see how a processor connects to those inputs and outputs, through the Memory Mapped method. You’ll also
+be introduced to a device that has a special purpose in computer systems, the Timer, which is used for precise
+measurement and allocation of time within the computer
+
+## Lab 5: Hex Displays and Interrupt-Driven Input/Output
+
+Interrupt-driven I/O is a fundamental way that all processors synchronize with the outside world. The goal of this
+lab is to understand the use of interrupts for the NIOS II processor, using assembly-language code, and to get some
+practice with subroutines, modularity, and learning how to use the HEX displays on the DE1-SoC.
+
+## Lab 6: Coding in C and Audio Input and Output
+The goal of this lab is to become comfortable with using the C programming language to do “embedded system”
+input/output, which you have been doing up to now using the Nios II Assembly Language. We will begin my
+doing something very similar to previous labs, except in C. Then we’ll move on to a more complex input/output
+device: sound input and output.
