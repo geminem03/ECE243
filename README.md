@@ -59,18 +59,16 @@ Main Loop and Game States: The game is structured around a central state machine
 
 The state logic includes:
 
-### Aiming: Players adjust the pool stick's angle using the keyboard (setAngleAndPower()), with guide lines visually rendered for aiming (draw_guide_lines()).
-### Shooting: Once the player sets the power and angle, a shot is triggered via the shoot() function, applying velocity to the cue ball.
-### Waiting: The game monitors the movement of the balls, and once all movement ceases, the next player's turn is initiated (wait() function).
-### Physics Engine: The physics behind ball movements, collisions, and potting are simulated in the update_circle() function. It calculates velocity changes, checks for collisions between balls, and reverses direction when balls hit the table’s edges. Balls are "potted" when they enter designated areas on the table, making them invisible (circle->visible = false).
-
-### Game Reset and Scoring: At any point during the game, players can reset the game via the pushbutton logic embedded in PB_EDGECAPTURE. Scores are dynamically displayed on 7-segment displays using the display_score() function, and the game detects when all balls of a player's color are potted, showing end-game messages (draw_pixel_data(p1_wins) or p2_wins).
-
-### Visual Effects: The game ensures smooth graphical updates by leveraging double buffering with the VGA display (wait_for_vsync()), ensuring a flicker-free visual experience.
+Aiming: Players adjust the pool stick's angle using the keyboard (setAngleAndPower()), with guide lines visually rendered for aiming (draw_guide_lines()).
+Shooting: Once the player sets the power and angle, a shot is triggered via the shoot() function, applying velocity to the cue ball.
+Waiting: The game monitors the movement of the balls, and once all movement ceases, the next player's turn is initiated (wait() function).
+Physics Engine: The physics behind ball movements, collisions, and potting are simulated in the update_circle() function. It calculates velocity changes, checks for collisions between balls, and reverses direction when balls hit the table’s edges. Balls are "potted" when they enter designated areas on the table, making them invisible (circle->visible = false).
+Game Reset and Scoring: At any point during the game, players can reset the game via the pushbutton logic embedded in PB_EDGECAPTURE. Scores are dynamically displayed on 7-segment displays using the display_score() function, and the game detects when all balls of a player's color are potted, showing end-game messages (draw_pixel_data(p1_wins) or p2_wins).
+Visual Effects: The game ensures smooth graphical updates by leveraging double buffering with the VGA display (wait_for_vsync()), ensuring a flicker-free visual experience.
 
 ## Key Technical Details:
-### Cue Stick Control: Players adjust the cue stick’s angle using the arrow keys, and the power is set with designated switches. The game calculates the resulting ball velocity based on angle and power inputs, as seen in setAngleAndPower().
-### Collision Detection and Response: The update_circle() function incorporates a simplified collision response between balls and the pool table’s walls, using a reflection-based approach when a ball hits the edge of the screen.
-### Buffering and Synchronization: Double buffering is used for smooth visual output, where the game switches between two pixel buffers to avoid visual tearing (wait_for_vsync() and pixel_buffer_start).
+Cue Stick Control: Players adjust the cue stick’s angle using the arrow keys, and the power is set with designated switches. The game calculates the resulting ball velocity based on angle and power inputs, as seen in setAngleAndPower().
+Collision Detection and Response: The update_circle() function incorporates a simplified collision response between balls and the pool table’s walls, using a reflection-based approach when a ball hits the edge of the screen.
+Buffering and Synchronization: Double buffering is used for smooth visual output, where the game switches between two pixel buffers to avoid visual tearing (wait_for_vsync() and pixel_buffer_start).
 
 Overall, Billiard Blitz is a highly interactive game that showcases both software logic and hardware integration on the DE1-SoC platform, combining game design principles, physics simulation, and user input handling.
