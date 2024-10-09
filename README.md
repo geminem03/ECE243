@@ -36,3 +36,12 @@ The goal of this lab is to become comfortable with using the C programming langu
 input/output, which you have been doing up to now using the Nios II Assembly Language. We will begin my
 doing something very similar to previous labs, except in C. Then we’ll move on to a more complex input/output
 device: sound input and output.
+
+## Lab 7: Introduction to Graphics and Animation
+The goal of this lab is to learn how to display images and perform animation, written in the C language for
+the DE1-SoC Computer. Graphics can be displayed by connecting a VGA monitor to the video-out port on the
+board. You can also use CPUlator to develop and debug graphics code - graphics that would normally appear on
+a VGA display are instead rendered inside a sub-window, labeled VGA pixel buffer, within CPUlator. This
+subwindow can be set to various sizes and it can also be “popped out” of the main browser window, if desired.
+
+# Final Project - Billiard Blitz
